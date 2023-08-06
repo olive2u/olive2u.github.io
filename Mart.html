@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mart.css">
+    <title>Pet Mart</title>
+</head>
+<script>
+    
+</script>
+<body>
+    <header class="main-header">
+        <nav class="nav main-nav">
+        <ul>
+            <li><a href="pet mart.html">Home</a></li>
+            <li><a href="Animals.html">Animals</a></li>
+            <li><a href="Mart.html">Mart</a></li>
+            <li><a href="Contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Pet Mart</h1>
+   </header>
+   <body>
+    <h2>Essentials for your pets!</h2>
+    <p>Enjoy these exclusive prices when you shop in-store with us.</p>
+    <table border="1">
+        <tr>
+          <th>Item</th>
+          <th>Pet</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Collars</td>
+          <td>Dog/Cat</td>
+          <td>$5</td>
+        </tr>
+        <tr>
+          <td>Food/water Bowls</td>
+          <td>Dog/Cat</td>
+          <td>$10</td>
+          <tr>
+            <td>Cages</td>
+            <td>Dog/Cat</td>
+            <td>$35</td>
+          </tr>
+          <tr>
+            <td>Disposal Bags</td>
+            <td>Dog</td>
+            <td>$7</td>   
+        <tr>
+            <td>Cat Litter</td>
+            <td>Cat</td>
+            <td>$10</td>
+        </tr>  
+        </tr>
+    </table>
+   </body>
+   <body>
+    <h2>Play a game and win prices!</h2>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="text" id="userGuess">
+    <button onclick="checkGuess()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkGuess() {
+            const userGuessElement = document.getElementById("userGuess");
+            const resultElement = document.getElementById("result");
+
+            
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+            
+            const userGuess = parseInt(userGuessElement.value);
+
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+                resultElement.textContent = "Please enter a valid number between 1 and 10.";
+            } else if (userGuess === randomNumber) {
+                resultElement.textContent = "Congratulations! You guessed the correct number!";
+            } else {
+                resultElement.textContent = `Wrong guess! The correct number was ${randomNumber}. Try again!`;
+            }
+        }
+    </script>
+    <p>Screenshot your winning number and claim a prize when you visit us.</p>
+   <footer class="main-footer">
+    <h3>Visit us today!</h3>
+    <ul>
+        <div class="google map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31909.089478416397!2d103.8207028!3d1.3947791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16eb64b0249d%3A0xe5f10ff680eed942!2sNanyang%20Polytechnic!5e0!3m2!1sen!2ssg!4v1690746254322!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <li>180 Ang Mo Kio Ave 8, Singapore 569830</li>
+        <li>Contact number: 6451 5115 </li>
+        </div>
+        </ul>
+   </footer>
+</body>
+</html>

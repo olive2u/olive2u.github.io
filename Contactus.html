@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contactus.css">
+    <title>Pet Mart</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav main-nav">
+        <ul>
+            <li><a href="pet mart.html">Home</a></li>
+            <li><a href="Animals.html">Animals</a></li>
+            <li><a href="Mart.html">Mart</a></li>
+            <li><a href="Contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Pet Mart</h1>
+   </header>
+    Contact us if you have any questions, we will get back to you within 3 days.
+    <section>
+        <p>Input your details:</p>
+        <style>
+            .contact-form {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .form-group {
+                margin-bottom: 10px;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 5px;
+            }
+            #result {
+                display: none;
+                margin-top: 10px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contact-form">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+            <div id="result">
+                <h3>Thank you for your submission!</h3>
+                <p>Name: <span id="display-name"></span></p>
+                <p>Email: <span id="display-email"></span></p>
+                <p>Message: <span id="display-message"></span></p>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById("myForm").onsubmit = function (event) {
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+    
+                document.getElementById("display-name").textContent = name;
+                document.getElementById("display-email").textContent = email;
+                document.getElementById("display-message").textContent = message; 
+                document.getElementById("result").style.display = "block";
+                document.getElementById("myForm").style.display = "none";
+            };
+        </script>
+
+      
+    </section>
+
+   <footer class="main-footer">
+    <h3>Visit us today!</h3>
+    <ul>
+        <div class="google map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31909.089478416397!2d103.8207028!3d1.3947791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16eb64b0249d%3A0xe5f10ff680eed942!2sNanyang%20Polytechnic!5e0!3m2!1sen!2ssg!4v1690746254322!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <li>180 Ang Mo Kio Ave 8, Singapore 569830</li>
+        <li>Contact number: 6451 5115 </li>
+        </div>
+        </ul>
+   </footer>
+</body>
+</html>

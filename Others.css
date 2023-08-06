@@ -1,0 +1,62 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+}
+.main-header {
+    background-image: url(../Downloads/header4.avif);
+     background-size: auto;
+     padding-bottom: 10px;
+     background-blend-mode: multiply;
+     background-color: rgba(0, 0, 0, 0);
+     background-position: -10%;
+    
+     }
+
+
+h1 {
+    text-align: center;
+    color: black;
+    
+}
+.nav ul {
+    margin: 0%;
+}
+nav li {
+    display: inline;
+}
+.nav a {
+ padding: .5em;
+ color: black;
+ text-decoration: none;
+ display: inline-block;
+}
+button {
+color: beige;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+
+
+.google-map {
+    padding-bottom: 5%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 50%;
+    width: 50%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+h3 {
+    text-decoration-line: underline;
+}
+.main-footer {
+    background-color: orange;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Animals.css">
+    <title>Pet Mart</title>
+</head>
+
+<body>
+   <header class="main-header">
+    <nav class="nav main-nav">
+        <ul>
+            <li><a href="pet mart.html">Home</a></li>
+            <li><a href="Animals.html">Animals</a></li>
+            <li><a href="Mart.html">Mart</a></li>
+            <l<li><a href="Contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Pet Mart</h1>
+    <button><a href="Dogs.html">Dogs</a></button>
+    <button><a href="Cats.html">Cats</a></button>
+    <button><a href="Others.html">Others</a></button>
+    <button><a href="Game.html">Game</a></button>
+   </header>
+   <section>
+    <h2>Animals</h2>
+    <p>All our animals are imported and well bred, 
+       rest assured your new friend is in safe hands while waiting for their new homes. 
+    </p>
+    <p>So what are you waiting for? Hurry down now, we are open everyday!  </p>
+   </section>
+   <style>
+    table {
+        border-collapse: collapse;
+        
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid darkgoldenrod;
+        text-align: center;
+    }
+</style>
+
+   <body>
+    <div id="calendar">
+<script>
+    function generateCalendar() {
+            const calendarDiv = document.getElementById("calendar");
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            const currentMonth = today.getMonth();
+            
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June", 
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+
+            let calendarHTML = `<h3>${monthNames[currentMonth]} ${currentYear}</h3>
+                                <table>
+                                    <tr>
+                                        <th>Sun</th>
+                                        <th>Mon</th>
+                                        <th>Tue</th>
+                                        <th>Wed</th>
+                                        <th>Thu</th>
+                                        <th>Fri</th>
+                                        <th>Sat</th>
+                                    </tr>`;
+
+            let dayCounter = 1;
+            for (let i = 0; i < 6; i++) {
+                calendarHTML += "<tr>";
+                for (let j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDay) {
+                        calendarHTML += "<td></td>";
+                    } else if (dayCounter <= daysInMonth) {
+                        calendarHTML += `<td>${dayCounter}</td>`;
+                        dayCounter++;
+                    } else {
+                        calendarHTML += "<td></td>";
+                    }
+                }
+                calendarHTML += "</tr>";
+            }
+
+            calendarHTML += "</table>";
+            calendarDiv.innerHTML = calendarHTML;
+        }
+
+        
+    generateCalendar(); 
+</script>
+   <footer class="main-footer">
+    <h3>Visit us today!</h3>
+    <ul>
+        <div class="google map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31909.089478416397!2d103.8207028!3d1.3947791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da16eb64b0249d%3A0xe5f10ff680eed942!2sNanyang%20Polytechnic!5e0!3m2!1sen!2ssg!4v1690746254322!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <li>180 Ang Mo Kio Ave 8, Singapore 569830</li>
+        <li>Contact number: 6451 5115 </li>
+        </div>
+        </ul>
+   </footer>
+</body>
+</html>
